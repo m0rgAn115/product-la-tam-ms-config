@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3311/usuarios_db
-    username: "{cipher}e2c401be23bd30703e600f00d54236faa10cda69b53e199e461bac0b6101ee6a"t
+    username: "{cipher}e2c401be23bd30703e600f00d54236faa10cda69b53e199e461bac0b6101ee6a"
     password: "{cipher}e2c401be23bd30703e600f00d54236faa10cda69b53e199e461bac0b6101ee6a"
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
@@ -29,6 +29,10 @@ management:
         include: "*"
   endpoint:
     health:
+      readiness-state:
+        enabled: true
+      liveness-state:
+        enabled: true
       show-details: always
     shutdown:
       enabled: true

@@ -29,6 +29,10 @@ management:
         include: "*"
   endpoint:
     health:
+      readiness-state:
+        enabled: true
+      liveness-state:
+        enabled: true
       show-details: always
     shutdown:
       enabled: true
